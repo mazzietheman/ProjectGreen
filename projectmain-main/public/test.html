@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Green Initiative & Community</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Common styles */
+        .icon-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+            margin: 10px;
+        }
+        .icon-box img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 0%;
+        }
+        .icon-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        #O3 {
+        font-size: 24px; /* Adjust as needed */
+        font-weight: bold;
+        }
+
+		html {
+            scroll-behavior: smooth;
+        }
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .scroll-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .myBtn {
+            color: white;
+            background-color: darkgreen;
+            border-radius: 10px;
+            padding: 4px;
+        }
+
+        a:hover, a:focus {
+            color: white;
+        }
+
+        .nav-link {
+            color: white;
+        }
+
+        .box {
+            border: 1px solid lightgreen;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .join-btn {
+            background-color: lightgreen;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        
+        body {
+				background-color: #ffffff;
+				color: #e8f5e9;
+				font-family: "Arial", sans-serif;
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh; /* Ensures the footer stays at the bottom */
+                background-color: #f0f8ff;
+                min-height: 100vh;
+			}
+
+		.footer {
+				background-color: #123d2c;
+				color: white;
+				padding: 20px 0;
+				text-align: center;
+				margin-top: auto; /* Pushes footer to the bottom */
+			}
+
+		.news-card {
+				transition: all 0.3s ease-in-out;
+				background: #ffffff;
+				border: none;
+				color: black;
+				border-radius: 10px;
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+			}
+
+		.news-card img {
+				width: 100%;
+				height: 200px; /* Adjust based on your preference */
+				object-fit: cover;
+			}
+
+		.news-card .card-body {
+				flex-grow: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+		.news-card:hover {
+				transform: scale(1.03);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+
+		.footer {
+				background-color: #123d2c;
+				color: white;
+				padding: 30px 0;
+			}
+
+		.hero-section {
+				background: whitesmoke;
+				color: black;
+				padding: 180px 0;
+				text-align: center;
+				font-weight: bold;
+			}
+
+		.sidebar {
+				background: white;
+				padding: 20px;
+				border-radius: 10px;
+				word-wrap: break-word;
+				overflow: hidden;
+			}
+
+		.category {
+				font-size: 14px;
+				font-weight: bold;
+				color: #1fc18e;
+			}
+
+		.trending-list a {
+				color: black;
+				text-decoration: none;
+				transition: color 0.3s;
+			}
+
+		.trending-list a:hover {
+				color: #1fc18e;
+			}
+
+		.trending-list li {
+				list-style-type: none;
+				font-weight: bold;
+				padding: 5px;
+				font-size: x-large;
+			}
+
+		.trending-list ol {
+				list-style: decimal !important; /* Force numbers to appear */
+				padding-left: 20px; /* Proper indentation */
+			}
+
+		.trending-list {
+				background-color: white;
+				padding: 10px;
+				text-align: left;
+			}
+
+		.btn {
+				color: black;
+			}
+
+		.bg-secondary {
+				opacity: 0.6;
+			}
+
+		.trending-list-item {
+				margin-bottom: 1.5rem;
+				display: flex;
+				color: black;
+			}
+
+			
+		h3 {
+				color: black;
+				font-size: xxx-large;
+				display: flex;
+				margin-left: 10px;
+			}
+
+		h2 {
+				color: black;
+				font-size: xxx-large;
+				display: flex;
+				margin-left: 10px;
+			}
+
+		.row > .col-md-6 {
+				padding: 20px; /* Adds space inside each column */
+			}
+
+		.nav-link {
+				color: white;
+			}
+
+        .hero-section {
+            position: relative;
+            background: url('https://source.unsplash.com/1600x900/?nature,forest') no-repeat center center/cover;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 100, 0, 0.6);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: auto;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .hero-content p {
+            font-size: 1.4rem;
+        }
+        .card-box {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .content {
+            flex: 1;
+        }
+        footer {
+            margin-top: auto;
+        }
+
+        .btn:hover, .btn:focus, .btn-primary:hover, .btn-primary:focus, .myBtn:hover, .myBtn:focus {
+            background-color: inherit !important;
+            box-shadow: none !important;
+            transform: none !important;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="community.html">Communities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-success text-white text-center py-5">
+        <h1>Join the Green Revolution</h1>
+        <p>Recycle, earn carbon credits, and support green energy.</p>
+        <a href="#" class="btn btn-light btn-lg">Join Now</a>
+    </header>
+
+    <!-- Payment Methods Section -->
+    <div class="container text-center my-4">
+        <div class="d-flex justify-content-center flex-wrap">
+
+            <a href="#" class="icon-box">
+                <img src="/projectmain-main/Pictures/Recycling_symbols.webp" alt="Recycle">
+            </a>
+
+            <a href="#" class="icon-box">
+                <img src="/projectmain-main/Pictures/carbon-credit-icon-for-graphic-design-logo-website-social-media-mobile-app-ui-illustration-vector.jpg" alt="Carbon Credit ">
+            </a>
+
+            <a href="#" class="icon-box">
+                <img src="/projectmain-main/Pictures/Investment-icon-Graphics-14308966-1.jpg" alt="Investment">
+            </a>
+            
+            <a href="#" class="icon-box">
+                <img src="/projectmain-main/Pictures/lg-BMRI.png" alt="Mandiri">
+            </a>
+            <a href="#" class="icon-box">
+                <img src="/projectmain-main/Pictures/images.jpg" alt="OVO">
+            </a>
+            <a href="#" class="icon-box">
+                <img src="/projectmain-main/Pictures/dana.png" alt="DANA">
+            </a>
+            <a href="#" class="icon-box">
+                <img src="/projectmain-main/Pictures/go_pay_logo.jpg" alt="GoPay">
+            </a>
+            <a href="#" class="icon-box">
+                <img src="/projectmain-main/Pictures/bank-account-icon-in-trendy-outline-style-isolated-on-white-background-bank-account-silhouette-symbol-for-your-website-design-logo-app-ui-illustration-eps10-free-vector.jpg" alt="Your Account">
+            </a>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Green Energy</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                        <button onclick="myFunction()" class="myBtn">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Blue Energy</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                        <button onclick="myFunction()" class="myBtn">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Other Articles</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                        <button onclick="myFunction()" class="myBtn">Read more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+
+    <!-- Community Section -->
+    <body>
+        <header class="hero-section">
+            <div class="container hero-content text-center">
+                <h1>EcoVision: A Greener Tomorrow</h1>
+                <p>Empowering communities to protect and preserve our planet for future generations.</p>
+                <a href="#join" class="btn btn-light btn-lg mt-3">Join the Movement</a>
+            </div>
+        </header>
+    
+        <section class="container py-5 content">
+            <h2 class="text-center mb-4">Our Initiatives</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://source.unsplash.com/400x300/?treeplanting" class="card-img-top" alt="Tree Planting">
+                        <div class="card-body">
+                            <h5 class="card-title">Tree Planting Campaigns</h5>
+                            <p class="card-text">Join hands to plant trees and revitalize our forests.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://source.unsplash.com/400x300/?recycling" class="card-img-top" alt="Recycling">
+                        <div class="card-body">
+                            <h5 class="card-title">Sustainability Workshops</h5>
+                            <p class="card-text">Discover sustainable solutions to reduce waste and carbon footprint.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://source.unsplash.com/400x300/?cleanup" class="card-img-top" alt="Cleanup Drive">
+                        <div class="card-body">
+                            <h5 class="card-title">Community Clean-Ups</h5>
+                            <p class="card-text">Help clean parks, beaches, and urban areas for a cleaner future.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://source.unsplash.com/400x300/?cleanup" class="card-img-top" alt="Cleanup Drive">
+                        <div class="card-body">
+                            <h5 class="card-title">Community Clean-Ups</h5>
+                            <p class="card-text">Help clean parks, beaches, and urban areas for a cleaner future.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://source.unsplash.com/400x300/?cleanup" class="card-img-top" alt="Cleanup Drive">
+                        <div class="card-body">
+                            <h5 class="card-title">Community Clean-Ups</h5>
+                            <p class="card-text">Help clean parks, beaches, and urban areas for a cleaner future.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    
+        <footer class="text-center py-4 bg-dark text-light">
+        </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    <!-- News Section -->
+    <div class="container mt-4" id="news">
+			<div class="row">
+				<div class="col-md-8 order-md-1 order-2">
+					<h2>Investments</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="card news-card">
+								<img
+									src="https://tempdev2.roomie.id/news_image/014556-test-one.webp"
+									class="card-img-top"
+									alt="Solar Energy"
+								/>
+								<div class="card-body">
+									<span class="category">Solar Energy</span>
+									<h5 class="card-title">
+										Solar Tech Advancements
+									</h5>
+									<p class="card-text">
+										New breakthroughs in solar panels
+										efficiency.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card news-card">
+								<img
+									src="https://tempdev2.roomie.id/news_image/014556-test-one.webp"
+									class="card-img-top"
+									alt="Wind Energy"
+								/>
+								<div class="card-body">
+									<span class="category">Wind Energy</span>
+									<h5 class="card-title">
+										Next-Gen Wind Turbines
+									</h5>
+									<p class="card-text">
+										How wind power is becoming more
+										efficient.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card news-card">
+								<img
+									src="https://tempdev2.roomie.id/news_image/014556-test-one.webp"
+									class="card-img-top"
+									alt="Green Energy"
+								/>
+								<div class="card-body">
+									<span class="category">Green Energy</span>
+									<h5 class="card-title">
+										Revolutionizing Renewable Energy
+									</h5>
+									<p class="card-text">
+										Discover new technologies powering the
+										future.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card news-card">
+								<img
+									src="https://tempdev2.roomie.id/news_image/014556-test-one.webp"
+									class="card-img-top"
+									alt="Blue Energy"
+								/>
+								<div class="card-body">
+									<span class="category">Blue Energy</span>
+									<h5 class="card-title">
+										Harnessing Ocean Power
+									</h5>
+									<p class="card-text">
+										How marine energy is reshaping
+										sustainability.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Green Initiative & Community</p>
+    </footer>
+</body>
+</html>

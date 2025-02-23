@@ -72,6 +72,9 @@ links ul li a:hover {
     background-color: #45a049; /* Hover effect */
 }
 
+.nav-link {
+    color: white;
+}
 
 .article {
     background: white; /* White background for article sections */

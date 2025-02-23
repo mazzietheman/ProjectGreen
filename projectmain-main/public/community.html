@@ -3,46 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Communities Page</title>
+    <title>EcoVision: A Greener Tomorrow</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .box {
-            border: 1px solid lightgreen;
-            padding: 20px;
+        body {
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .hero-section {
+            position: relative;
+            background: url('https://source.unsplash.com/1600x900/?nature,forest') no-repeat center center/cover;
+            color: white;
+            padding: 120px 20px;
             text-align: center;
-            border-radius: 10px;
         }
-        .join-btn {
-            background-color: lightgreen;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(48 125 90);
         }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+        }
+
+        .card-box {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            height: 100%;
+            width: 100%;
+        }   
+
+        .content {
+            flex: 1;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        .bg-dark {
+            --bs-bg-opacity: 1;
+            background-color: rgb(48 125 90) !important;
+        }
+
+        .row {
+            justify-content: center;
+        }
+
+        .navbar {
+            position: sticky; top: 0;
+            backdrop-filter: blur(45px);
+            z-index: 9999;
+        }
+
+        .navbar ul li a {
+            color: white;
+        }
+
+        .bg-success {
+            --bs-bg-opacity: 1;
+            background-color: rgba(48 125 90) !important;
+        }
+
     </style>
 </head>
 <body>
-    <div class="container mt-4">
-        <h1 class="text-center">Communities Page</h1>
-        <nav class="d-flex justify-content-center gap-3 my-3">
-            <a href="#" class="text-dark">Home</a>
-            <a href="#" class="text-dark">About Us</a>
-            <a href="#" class="text-dark">Communities</a>
-            <a href="#" class="text-dark">Login</a>
-            <a href="#" class="text-dark">Search</a>
-        </nav>
-        <div class="row mt-4">
-            <div class="col-md-3 d-flex flex-column align-items-center gap-3">
-                <div class="box">Picture</div>
-                <div class="box">Picture</div>
-                <div class="box">Picture</div>
-                <div class="box">Picture</div>
-                <button class="join-btn mt-3">Join Now</button>
-            </div>
-            <div class="col-md-9">
-                <div class="box h-100">Pictures or Design</div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="community.html">Communities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Search</a></li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container hero-content text-center">
+            <h1>EcoVision: A Greener Tomorrow</h1>
+            <p>Empowering communities to protect and preserve our planet for future generations.</p>
+            <a href="#join" class="btn btn-light btn-lg mt-3">Join the Movement</a>
+        </div>
+    </header>
+
+    <section class="container py-5 content">
+        <h2 class="text-center mb-4">Our Initiatives</h2>
+        <div class="row gy-3">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/projectmain-main/Pictures/360_F_824475365_Q0G4AasvUu0KPJ6jMAR48zxrQbxm8UTS.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Tree Planting Campaigns</h5>
+                        <p class="card-text">Join hands to plant trees and revitalize our forests.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/projectmain-main/Pictures/OIP.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Sustainability Workshops</h5>
+                        <p class="card-text">Discover sustainable solutions to reduce waste and carbon footprint.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/projectmain-main/Pictures/2020-CleanGreen_social_post.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Community Clean-Ups</h5>
+                        <p class="card-text">Help clean parks, beaches, and urban areas for a cleaner future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 bg-dark text-light">
+        <p>&copy; 2025 EcoVision. All rights reserved. | <a href="#" class="text-light">Privacy Policy</a></p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

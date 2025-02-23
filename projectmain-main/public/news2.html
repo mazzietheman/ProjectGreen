@@ -11,8 +11,11 @@
             font-family: 'Poppins', sans-serif;
         }
         .navbar {
-            background-color: #004d40;
+            background-color: rgba(48 125 90);
             padding: 15px;
+            position: sticky; top: 0;
+            backdrop-filter: blur(45px);
+            z-index: 9999;
         }
         .navbar-brand, .nav-link {
             color: white !important;
@@ -30,7 +33,7 @@
             object-fit: cover;
         }
         .footer {
-            background-color: #004d40;
+            background-color: rgba(48 125 90);
             color: white;
             padding: 30px;
             text-align: center;
@@ -88,7 +91,6 @@
                         <span class="category">Green Energy</span>
                         <h4 class="card-title">The Future of Renewable Energy</h4>
                         <p class="card-text">Renewable energy sources like solar, wind, and hydro are revolutionizing how we power the world. With advancements in battery storage and energy efficiency, the shift toward a greener planet is accelerating.</p>
-                        <a href="#" class="btn btn-success">Read More</a>
                     </div>
                 </div>
             </div>
@@ -120,7 +122,6 @@
                                     <span class="category">${article.category}</span>
                                     <h5 class="card-title">${article.title}</h5>
                                     <p class="card-text">Learn about the latest developments in ${article.category.toLowerCase()} and how they impact the environment.</p>
-                                    <a href="#" class="btn btn-success">Read More</a>
                                 </div>
                             </div>
                         </div>
